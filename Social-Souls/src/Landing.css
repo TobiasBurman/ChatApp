@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+body{
+  background-color: #262626;
+  margin:0;
+  padding:0;
+}
+
+@font-face {
+  font-family: Spooky;
+  src: url(../fonts/Toxia-OwOA.ttf);
+}
+
+#header{
+ font-size: 60px;
+ align-items: center;
+ display: flex;
+ justify-content: center;
+ font-family: Spooky;
+ color:aliceblue;
+ position: relative;
+ bottom: 60px;
+}
+
+.header2{
+color:#f06060;
+font-size: 65px;
+padding:10px;
+}
+
+.description{
+ align-items: center;
+ display: flex;
+ justify-content: center;
+ font-family: "Agbalumo", system-ui;
+ color:aliceblue;
+ position: relative;
+ bottom:430px;
+ font-size: 25px;
+}
+
+#header_container{
+  display: flex;
+  justify-content: center;
+  align-items:start;
+  position: relative;
+  
+}
+
+
+@media (max-width: 800px) {
+  .header2{
+    font-size: 5dvh;
+    }
+
+    #header{
+      font-size: 5dvh;
+   
+     }
+}
