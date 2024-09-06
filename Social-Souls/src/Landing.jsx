@@ -25,41 +25,58 @@ export default function Landing() {
         <div className="image-container"></div>
       </div>
 
-      <div className="form-container">
-        {/* Checkbox used to toggle forms */}
-        <input type="checkbox" id="signup-toggle" />
-
-        <form className="form" onSubmit={register}>
-          <div className="form_front">
-            <div className="form_details">Sign Up</div>
-            <input
-              value={username}
-              onChange={(ev) => setUsername(ev.target.value)}
-              placeholder="Username"
-              className="input"
-              type="text"
-            />
-            <input
-              value={password}
-              onChange={(ev) => setPassword(ev.target.value)}
-              placeholder="Password"
-              className="input"
-              type="password"
-            />
-            <button type="submit" className="btn">
-              {" "}
-              {/* Change type to "submit" */}
-              Register
-            </button>
-            <span className="switch">
-              Already have an account?
-              <label className="signup_tog" htmlFor="signup-toggle">
-                Sign up
-              </label>
-            </span>
-          </div>
-        </form>
+      <div class="container">
+  <input type="checkbox" id="register_toggle"></input>
+  <div class="slider">
+    <form class="form">
+      <span class="title">Login</span>
+      <div class="form_control">
+        <input type="text" class="input" required=""></input>
+        <label class="label">Username</label>
       </div>
+      <div class="form_control">
+        <input type="password" class="input" required=""></input>
+        <label class="label">Password</label>
+      </div>
+      <button>Login</button>
+
+      <span class="bottom_text">Don't have an account? <label for="register_toggle" class="swtich">Sign Up</label> </span>
+    </form>
+
+
+    
+    <form class="form">
+      <span class="title">Sign Up</span>
+      <div class="form_control">
+        <input type="text" class="input" required=""></input>
+        <label class="label">Username</label>
+      </div>
+      <div class="form_control">
+        <input type="email" class="input" required=""></input>
+        <label class="label">Email</label>
+      </div>
+      <div class="form_control">
+        <input type="password" class="input" required=""></input>
+        <label class="label">Password</label>
+      </div>
+      <button>Sign Up</button>
+
+      <span class="bottom_text">Already have an account? <label for="register_toggle" class="swtich">Sign In</label> </span>
+    </form>
+
+    
+    </div>
+</div>
+
+    
+
+
+
+
+
+
+              
+          
     </>
   );
 }
