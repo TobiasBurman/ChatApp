@@ -1,8 +1,14 @@
 import { useState } from "react";
 import "./Landing.css";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUnlock } from "@fortawesome/free-solid-svg-icons";
+
 // import { motion } from "framer-motion";
 // import logotrans from "./assets/logo_trans.png";
+
+
+
 
 export default function Landing() {
   const [username, setUsername] = useState("");
@@ -25,19 +31,29 @@ export default function Landing() {
         <div className="image-container"></div>
       </div>
 
-      <div class="container">
-  <input type="checkbox" id="register_toggle"></input>
+
+
+
+  <div class="container">
+  <input type="checkbox" id="register_toggle"/>
   <div class="slider">
     <form class="form">
       <span class="title">Login</span>
-      <div class="form_control">
-        <input type="text" class="input" required=""></input>
-        <label class="label">Username</label>
-      </div>
-      <div class="form_control">
-        <input type="password" class="input" required=""></input>
-        <label class="label">Password</label>
-      </div>
+     
+
+      <div class="form__group field">
+    <input type="input" class="form__field" placeholder="Username" required/> 
+    <label for="name" class="form__label">Username</label>
+</div>
+
+
+
+<div class="form__group input-with-icon">
+    <input type="password" className="form__field" placeholder="Password" required/>
+    <label for="name" class="form__label">Password</label>
+    <FontAwesomeIcon icon={faUnlock} className="icon" />
+</div>
+    
       <button>Login</button>
 
       <span class="bottom_text">Don't have an account? <label for="register_toggle" class="swtich">Sign Up</label> </span>
@@ -47,21 +63,30 @@ export default function Landing() {
     
     <form class="form">
       <span class="title">Sign Up</span>
+
       <div class="form_control">
-        <input type="text" class="input" required=""></input>
-        <label class="label">Username</label>
+       <div class="form__group field">
+        <input type="input" className="form__field" placeholder="Username" required/>
+        <label for="name" class="form__label">Username</label>
+       </div>
       </div>
+
       <div class="form_control">
-        <input type="email" class="input" required=""></input>
-        <label class="label">Email</label>
+       <div class="form__group field">
+        <input type="password" className="form__field" placeholder="Confirm Password" required/>
+        <label for="name" class="form__label">Password</label>
+       </div>
       </div>
+
       <div class="form_control">
-        <input type="password" class="input" required=""></input>
-        <label class="label">Password</label>
+       <div class="form__group field">
+        <input type="password" className="form__field" placeholder="Username" required />
+        <label for="name" class="form__label">Confirm Password</label>
+       </div>
       </div>
       <button>Sign Up</button>
 
-      <span class="bottom_text">Already have an account? <label for="register_toggle" class="swtich">Sign In</label> </span>
+      <span class="bottom_text">Already have an account? <label for="register_toggle" class="switich">Sign In</label> </span>
     </form>
 
     
@@ -71,12 +96,6 @@ export default function Landing() {
     
 
 
-
-
-
-
-              
-          
     </>
   );
 }

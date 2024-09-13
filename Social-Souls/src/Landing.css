@@ -72,7 +72,7 @@ body {
 .container .slider {
   width: 200%;
   position: relative;
-  transition: transform ease-out 0.3s;
+  transition: transform ease-out 0.5s;
   display: flex;
 }
 
@@ -87,11 +87,11 @@ body {
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin:30px;
   gap: 30px;
   padding: 1.5em 3em;
   width: 50%;
+
 }
 
 .title {
@@ -118,6 +118,12 @@ form .form_control .label {
   color: #b0b0b0;
 }
 
+.bottom_text{
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+/* This is a single-line comment */
 form .form_control .input {
   width: 100%;
   background-color: transparent;
@@ -158,9 +164,6 @@ form button:active {
   box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%), inset 3px 3px 4px #0e0e0e, inset -3px -3px 4px #5f5e5e;
 }
 
-.bottom_text {
-  font-size: 0.65em;
-}
 
 .bottom_text .swtich {
   font-weight: 700;
@@ -168,13 +171,84 @@ form button:active {
 }
 
 
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 180px;
+}
+
+/* the input fields */
+.form__field {
+  font-family: inherit;
+  width: 250px;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38caef;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
 
 
+/* Position the icon absolutely to the right */
+.input-with-icon .icon {
+  position: absolute;
+  left: 230px;
+  color: #9b9b9b; 
+  font-size: 1.2em; 
+  pointer-events: none; 
+}
 
 
 @media (max-width: 800px) {
   #header_container {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
+    flex-direction: column; 
   }
 
   .header2 {
