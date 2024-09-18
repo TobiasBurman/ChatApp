@@ -13,6 +13,28 @@ body {
   src: url(../fonts/Toxia-OwOA.ttf);
 }
 
+@font-face{
+  font-family:Melted;
+  src:url(../fonts/Melt.ttf);
+}
+
+@font-face{
+  font-family:spook1;
+  src:url(../fonts/HighandDemoRegular-vm1X4.otf);
+}
+
+@font-face{
+  font-family:spook2;
+  src:url(../fonts/Honeydripper-XE52.otf);
+}
+
+@font-face{
+  font-family:spook3;
+  src:url(../fonts/NightHalloweenPersonalUseRegular-lgq0e.ttf);
+}
+
+
+
 #header_container {
   display: flex; 
   justify-content: center; 
@@ -97,7 +119,8 @@ body {
 .title {
   text-align: center;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 2.3em;
+  font-family: spook1;
 }
 
 form .form_control {

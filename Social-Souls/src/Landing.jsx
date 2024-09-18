@@ -2,10 +2,12 @@ import { useState } from "react";
 import "./Landing.css";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUnlock } from "@fortawesome/free-solid-svg-icons";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
+import {faUser} from "@fortawesome/free-solid-svg-icons";
 
 // import { motion } from "framer-motion";
-// import logotrans from "./assets/logo_trans.png";
+// <img width="170px" height="100px" style={{marginLeft:'30px', marginTop:'-20px', display:'block'}} src={logotrans}/>
+import logotrans from "./assets/logo_trans.png";
 
 
 
@@ -38,12 +40,13 @@ export default function Landing() {
   <input type="checkbox" id="register_toggle"/>
   <div class="slider">
     <form class="form">
-      <span class="title">Login</span>
+      <span class="title">Sign in</span>
      
 
-      <div class="form__group field">
+      <div class="form__group field input-with-icon">
     <input type="input" class="form__field" placeholder="Username" required/> 
     <label for="name" class="form__label">Username</label>
+    <FontAwesomeIcon icon={faUser} className="icon" />
 </div>
 
 
@@ -51,12 +54,13 @@ export default function Landing() {
 <div class="form__group input-with-icon">
     <input type="password" className="form__field" placeholder="Password" required/>
     <label for="name" class="form__label">Password</label>
-    <FontAwesomeIcon icon={faUnlock} className="icon" />
+    <FontAwesomeIcon icon={faLock} className="icon" />
 </div>
     
       <button>Login</button>
 
       <span class="bottom_text">Don't have an account? <label for="register_toggle" class="swtich">Sign Up</label> </span>
+
     </form>
 
 
