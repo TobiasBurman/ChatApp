@@ -6,7 +6,6 @@ import { faLock } from "@fortawesome/free-solid-svg-icons";
 import {faUser} from "@fortawesome/free-solid-svg-icons";
 
 // import { motion } from "framer-motion";
-// <img width="170px" height="100px" style={{marginLeft:'30px', marginTop:'-20px', display:'block'}} src={logotrans}/>
 import logotrans from "./assets/logo_trans.png";
 
 
@@ -23,6 +22,7 @@ export default function Landing() {
 
   return (
     <>
+
       <div id="header_container">
         <div className="text-container">
           <h1 id="header">
@@ -57,7 +57,7 @@ export default function Landing() {
     <FontAwesomeIcon icon={faLock} className="icon" />
 </div>
     
-      <button>Login</button>
+      <button className="Btn">Login</button>
 
       <span class="bottom_text">Don't have an account? <label for="register_toggle" class="swtich">Sign Up</label> </span>
 
