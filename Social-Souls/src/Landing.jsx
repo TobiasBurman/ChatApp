@@ -4,6 +4,7 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import {faUser} from "@fortawesome/free-solid-svg-icons";
+import {faUnlock} from "@fortawesome/free-solid-svg-icons";
 
 // import { motion } from "framer-motion";
 import logotrans from "./assets/logo_trans.png";
@@ -57,7 +58,7 @@ export default function Landing() {
     <FontAwesomeIcon icon={faLock} className="icon" />
 </div>
     
-      <button className="Btn">Login</button>
+      <button className="Btn"></button>
 
       <span class="bottom_text">Don't have an account? <label for="register_toggle" class="swtich">Sign Up</label> </span>
 
@@ -72,6 +73,7 @@ export default function Landing() {
        <div class="form__group field">
         <input type="input" className="form__field" placeholder="Username" required/>
         <label for="name" class="form__label">Username</label>
+        <FontAwesomeIcon icon={faUser} className="icons" />
        </div>
       </div>
 
@@ -79,6 +81,7 @@ export default function Landing() {
        <div class="form__group field">
         <input type="password" className="form__field" placeholder="Confirm Password" required/>
         <label for="name" class="form__label">Password</label>
+        <FontAwesomeIcon icon={faLock} className="icons" />
        </div>
       </div>
 
@@ -86,11 +89,12 @@ export default function Landing() {
        <div class="form__group field">
         <input type="password" className="form__field" placeholder="Username" required />
         <label for="name" class="form__label">Confirm Password</label>
+        <FontAwesomeIcon icon={faUnlock} className="icons" />
        </div>
       </div>
-      <button>Sign Up</button>
+      <button className="Btn-signup"></button>
 
-      <span class="bottom_text">Already have an account? <label for="register_toggle" class="switich">Sign In</label> </span>
+      <span class="bottom_text">Already have an account? <label for="register_toggle" class="swtich">Sign In</label> </span>
     </form>
 
     
